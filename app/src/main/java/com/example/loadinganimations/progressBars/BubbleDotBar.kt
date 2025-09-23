@@ -12,6 +12,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -43,17 +45,17 @@ fun BubbleDotProgressBar() {
         )
     }
     Row(
-        horizontalArrangement = Arrangement.spacedBy(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(24.dp),
         verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier.size(150.dp).padding(start = 20.dp)
+        modifier = Modifier.wrapContentSize()
     ) {
         scales.forEach {scale->
             Box (
                 modifier = Modifier
-                    .size(24.dp)
+                    .size(28.dp)
                     .scale(scale.value)
                     .clip(CircleShape)
-                    .background(Color.Red.copy(alpha = .5f))
+                    .background(Color.Red.copy(alpha = .6f))
 
             )
         }

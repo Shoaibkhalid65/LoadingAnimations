@@ -40,6 +40,10 @@ val Sun3= Color(0xFFf7797d)
 
 val CompareNow= Color(0xFFEF3B36)
 
+val BackgroundColor1=Color(0xFF667eea)
+val BackgroundColor2=Color(0xFF764ba2)
+val BackgroundColor3=Color(0xFFf093fb)
+
 val GreenGradient= Brush.linearGradient(
     listOf(
         Green300,

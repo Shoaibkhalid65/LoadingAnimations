@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -43,7 +44,7 @@ fun MovingBoxProgressBar(){
     grid[row][col]=0
     LaunchedEffect(key1 = true) {
         while (true){
-            delay(300)
+            delay(250)
             grid.forEachIndexed { rowIndex, rowArray ->
                rowArray.forEachIndexed { colIndex,_->
                     grid[rowIndex][colIndex]=1
@@ -55,7 +56,7 @@ fun MovingBoxProgressBar(){
     }
 
     Column (
-        modifier = Modifier.size(200.dp).padding(top = 50.dp),
+        modifier = Modifier.wrapContentSize(),
         verticalArrangement = Arrangement.spacedBy(4.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ){
@@ -65,7 +66,7 @@ fun MovingBoxProgressBar(){
                 horizontalArrangement = Arrangement.spacedBy(4.dp)
             ){
                 repeat(3) {j->
-                    val color=if(grid[i][j]==0) Color.Transparent else Color.Magenta.copy(.5f)
+                    val color=if(grid[i][j]==0) Color.Transparent else Color.Cyan.copy(.5f)
                     Box(
                         modifier = Modifier
                             .size(25.dp)

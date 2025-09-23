@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -44,7 +45,7 @@ fun CircularProgressBar(){
     )
     val numberOfBars=12
     Canvas(
-        modifier = Modifier.size(100.dp).padding(16.dp)
+        modifier = Modifier.size(200.dp).padding(16.dp)
     ) {
         val canvasWidth=size.width
         val canvasHeight=size.height

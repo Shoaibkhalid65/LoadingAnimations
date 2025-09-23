@@ -8,6 +8,8 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -24,14 +26,14 @@ fun CircularBarRotation1(){
     val infiniteTransition= rememberInfiniteTransition()
     val radius=infiniteTransition.animateFloat(
         initialValue = 10f,
-        targetValue = 200f,
+        targetValue = 150f,
         animationSpec = infiniteRepeatable(
             animation = tween(3000),
             repeatMode = RepeatMode.Reverse
         )
     )
     Box(
-        modifier = Modifier.size(500.dp),
+        modifier = Modifier.wrapContentSize(),
         contentAlignment = Alignment.Center
     ){
         Box(modifier = Modifier.size(100.dp).rotate(radius.value)) {
